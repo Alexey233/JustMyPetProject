@@ -21,21 +21,21 @@ namespace Phoenix.Controllers
 
         public IActionResult UsefulUrl()
         {
-            var Url = new UrlForViewModel { AllUsefulUrl = _allUrlForGames.AllUsefulUrl };
+            var url = new UrlForViewModel { AllUsefulUrl = _allUrlForGames.AllUsefulUrl };
 
-            return View(Url);
+            return View(url);
         }
 
        
 
         public IActionResult InfoAboutUrl(int id)
         {
-            var Info = new InfoAboutUrlViewModel
+            var info = new InfoAboutUrlViewModel
             {
                 UsefulUrl = _applicationDB.UsefulUrl.FirstOrDefault(p => p.Id == id)
             };
 
-            return View(Info);
+            return View(info);
         }
 
 
