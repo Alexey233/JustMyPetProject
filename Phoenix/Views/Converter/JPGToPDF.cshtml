@@ -1,0 +1,10 @@
+﻿
+<p><h4>Выберите одну или несколько картинок:</h4></p>
+<div>
+    <form class = "form-label" asp-controller = "Converter" asp-action = "JPGToPDF" enctype = "multipart/form-data" method = "post">          
+         <input class = "form-control" type="file"  multiple name="files">
+          <br>
+         <button class = "mt-3 btn-primary" type="submit">Конвертировать в ПДФ</button>
+    </form> 
+</div>
+

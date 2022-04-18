@@ -1,0 +1,20 @@
+﻿@model UrlForViewModel;
+
+<a asp-controller = "Games" asp-action = "NewUrl" class="btn btn-primary btn-lg px-4 mb-4">Добавить новую ссылку</a>
+
+@foreach(var url in Model.AllUsefulUrl)
+{      
+  <div class="d-flex text-muted pt-3">
+    <div class = "pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between"> 
+             <strong class = "fs-6"><a class = "link-success" asp-controller = "Games" asp-action = "InfoAboutUrl" asp-route-id = "@url.Id">@url.Description</a> </strong>
+              <a class = "btn-group" asp-controller = "Games" asp-action = "DeleteUrl" asp-route-id = "@url.Id">Delete</a>  
+        </div>  
+    </div>
+  </div>
+}
+
+
+
+
+  
